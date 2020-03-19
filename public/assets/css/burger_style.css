@@ -1,0 +1,25 @@
+.container {
+    background-color: #ffca63;
+    margin: 0;
+    height: 100vh;
+}
+
+#submit {
+    text-align: center;
+}
+
+#burgerName {
+    height: 4em;
+    width: 75%;
+}
+
+ol {
+ background-color: #fff;
+}
+
+#burger {
+    margin-left: 26vw;
+    width: 28%;
+    height: 21%;
+    margin-top: 2em;
+}

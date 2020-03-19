@@ -1,48 +1,55 @@
 {{!-- Setup the index.handlebars to have the template that Handlebars can render onto. --}}
 
-<h1>Burgers!</h1>
-
-<h2>All Burgers</h2>
-
-<ul>
-    {{#each burgers}}
-    {{/each}}
-</ul>
-
-<h2>Burgers To Be Devoured!</h2>
-
-<ul>
-    {{#each burgers}}
-    {{#unless devoured}}
-    <h3>{{test}}</h3>
-    {{/unless}}
-    {{/each}}
-</ul>
-
-<h2>Burgers Devoured!</h2>
-
-<ul>
-    {{#each cats}}
-    {{#if devoured}}
-    {{> cats/cat-block devour=false}}
-    {{/if}}
-    {{/each}}
-</ul>
-
-<h2>Add a Burger</h2>
-<form class="create-form">
-
-    <div class="form-group">
-        <label for="burgerName">Burger Name:</label>
-        <input type="text" id="burgerName" name="name">
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <img src="/assets/img/burger.png" id="burger" alt="burger">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s3"></div>
+        <div class="col s6 center-align">
+            <h2>Eat-Da-Burger!</h2>
+        </div>
+        <div class="col s3"></div>
     </div>
 
-    
+    <div class="row">
+        <div class="col s2"></div>
+        <div class="col s3">
+            <ol>
+                {{#each burgers}}
+                {{#unless devoured}}
+                <li>&nbsp;Created Burger</li>
+                {{/unless}}
+                {{/each}}
+            </ol>
+        </div>
+        <div class="col s2"></div>
+        <div class="col s3">
+            <ol>
+                {{#each burgers}}
+                {{#if devoured}}
+                <li>&nbsp;Devoured Burger</li>
+                {{/if}}
+                {{/each}}
+            </ol>
+        </div>
+        <div class="col s2"></div>
+    </div>
 
-    <button type="submit">Submit</button>
-    <span>Enter a burger you want to eat and click the "Submit" button.</span>
-</form>
+    <div class="row">
+        <div class="col s4"></div>
+        <div class="col s4 center-align"">
+            <form class=" create-form">
+            <input type="text-area" id="burgerName" name="name"><br>
+            <span id="newBurger">Enter a burger you want to eat and click the "Submit" button.</span>
+            <br><br>
+            <a class="btn-flat blue" id="test" type="submit">Submit</a>
+            {{!-- <button type="submit">Submit</button> --}}
+            </form>
+        </div>
+        <div class="col s4"></div>
+    </div>
 
-
-
-
+</div>
