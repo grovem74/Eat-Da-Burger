@@ -1,0 +1,48 @@
+{{!-- Setup the index.handlebars to have the template that Handlebars can render onto. --}}
+
+<h1>Burgers!</h1>
+
+<h2>All Burgers</h2>
+
+<ul>
+    {{#each burgers}}
+    {{/each}}
+</ul>
+
+<h2>Burgers To Be Devoured!</h2>
+
+<ul>
+    {{#each burgers}}
+    {{#unless devoured}}
+    <h3>{{test}}</h3>
+    {{/unless}}
+    {{/each}}
+</ul>
+
+<h2>Burgers Devoured!</h2>
+
+<ul>
+    {{#each cats}}
+    {{#if devoured}}
+    {{> cats/cat-block devour=false}}
+    {{/if}}
+    {{/each}}
+</ul>
+
+<h2>Add a Burger</h2>
+<form class="create-form">
+
+    <div class="form-group">
+        <label for="burgerName">Burger Name:</label>
+        <input type="text" id="burgerName" name="name">
+    </div>
+
+    
+
+    <button type="submit">Submit</button>
+    <span>Enter a burger you want to eat and click the "Submit" button.</span>
+</form>
+
+
+
+
