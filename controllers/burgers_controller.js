@@ -1,5 +1,5 @@
 var express = require("express");
-var burger = require("../models/burger.js")
+var burger = require("../models/burger.js");
 
 // Create the router for the app
 var router = express.Router();
@@ -10,13 +10,21 @@ router.get("/", function (req, res) {
     var hbsObject = {
       burgers: data
     };
-    // console.log("hbsObject:", hbsObject);
     res.render("index", hbsObject);
   });
 });
 
+// router.get("/", function (req, res) {
+//   burger.selectAll(function (data) {
+//     var hbsObject = {
+//       burgers: data[1]
+//     };
+//     res.render("index", hbsObject);
+//   });
+// });
+
 router.post("/api/burgers", function (req, res) {
-  burger.create([
+  burger.createBurger([
     "burger_name", "devoured"
   ], [
     req.body.burger_name, 0

@@ -17,13 +17,15 @@
     <div class="row">
         <div class="col s2"></div>
         <div class="col s3">
+            <div class="center-align">Burgers created: {{{burgers.length}}}</div>
             <ol>
                 {{#each burgers}}
                 {{#unless devoured}}
-                <li>{{{this.burger_name}}}</li>
+                <li>{{{this.burger_name}}} <button type="submit" class="devour" id="devour-it-1">Devour It!</button></li>
                 {{/unless}}
                 {{/each}}
             </ol>
+            <div id="noCreate">Create some burgers!</div>
         </div>
         <div class="col s2"></div>
         <div class="col s3">
@@ -31,10 +33,10 @@
                 {{#each burgers}}
                 {{#if devoured}}
                 <li>{{{this.burger_name}}}</li>
-                <li></li>
                 {{/if}}
                 {{/each}}
             </ol>
+            <div id="noDevour">Your lack of burger consumption is disturbing...</div>
         </div>
         <div class="col s2"></div>
     </div>
@@ -46,8 +48,8 @@
             <input type="text-area" id="burgerName" name="name"><br>
             <span id="newBurger">Enter a burger you want to eat and click the "Submit" button.</span>
             <br><br>
-            <a class="btn-flat blue" id="test" type="submit">Submit</a>
-            {{!-- <button type="submit">Submit</button> --}}
+            <a class="btn-flat blue" id="submit" type="submit">Submit</a>
+            {{!-- <button type="submit" id="test">Submit</button> --}}
             </form>
         </div>
         <div class="col s4"></div>

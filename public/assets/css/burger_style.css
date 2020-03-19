@@ -19,23 +19,23 @@
 
 @keyframes burgerSlide {
     0% {
-        left: 43vw;
+        left: 45vw;
         top: -28em;
     }
     25% {
-        left: 43vw;
+        left: 45vw;
         top: -20em;
     }
     50% {
-        left:43vw;
+        left: 45vw;
         top: -12em;
     }
     75% {
-        left: 43vw;
-        top:-4em;
+        left: 45vw;
+        top: -4em;
     }
     100% {
-        left: 43vw;
+        left: 45vw;
         top: 3em;
     }
 }
@@ -52,5 +52,37 @@
 
 ol {
     background-color: #fff;
+    z-index: 10;
+    position: relative;
 }
 
+.devour {
+    /* display: block; */
+    position: absolute;
+    left: 31em;
+}
+
+li {
+    margin-bottom: .5em;
+ 
+}
+
+#noDevour {
+    position: absolute;
+    z-index: 0;
+    color: red;
+    font-weight: 700;
+    top: 22em;
+    width: 23em;
+    text-align: center;
+}
+
+#noCreate {
+    position: absolute;
+    z-index: 0;
+    color: red;
+    font-weight: 700;
+    top: 22em;
+    width: 23em;
+    text-align: center;
+}

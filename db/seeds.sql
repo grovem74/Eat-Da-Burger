@@ -8,4 +8,4 @@ INSERT INTO burgers (id, burger_name, devoured)
 VALUES (3, "Prime Rib Burger", FALSE);
 
 INSERT INTO burgers (id, burger_name, devoured)
-VALUES (4, "BBQ Brisket Burger", TRUE)
+VALUES (4, "BBQ Brisket Burger", FALSE)

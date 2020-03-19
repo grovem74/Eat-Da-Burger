@@ -8,7 +8,6 @@ function printQuestionMarks(num) {
     for (var i = 0; i < num; i++) {
         arr.push("?");
     }
-
     return arr.toString();
 }
 
@@ -25,8 +24,7 @@ function objToSql(ob) {
             if (typeof value === "string" && value.indexOf(" ") >= 0) {
                 value = "'" + value + "'";
             }
-            // e.g. {name: 'Lana Del Grey'} => ["name='Lana Del Grey'"]
-            // e.g. {sleepy: true} => ["sleepy=true"]
+  
             arr.push(key + "=" + value);
         }
     }
@@ -39,29 +37,23 @@ function objToSql(ob) {
 var orm = {
     selectAll: function (tableInput, cb) {
         var queryString = "SELECT * FROM burgers;";
-        
         connection.query(queryString, function (err, result) {
             if (err) {
                 throw err;
             }
             cb(result);
             burgerData = result[0].burger_name;
-            console.log("ran selectAll() and retunred result: ", result);
-            console.log("burgerData: ", burgerData);
         });
     },
-    create: function (table, cols, vals, cb) {
-        var queryString = "INSERT INTO " + table;
-
+    createBurger: function (table, cols, vals, cb) { console.log("create");
+        var queryString = "INSERT INTO" + table;
         queryString += " (";
         queryString += cols.toString();
         queryString += ") ";
         queryString += "VALUES (";
         queryString += printQuestionMarks(vals.length);
         queryString += ") ";
-
         console.log(queryString);
-
         connection.query(queryString, vals, function (err, result) {
             if (err) {
                 throw err;
@@ -70,21 +62,19 @@ var orm = {
             cb(result);
         });
     },
-    // An example of objColVals would be {name: panther, sleepy: true}
-    update: function (table, objColVals, condition, cb) {
-        var queryString = "UPDATE " + table;
 
+    // An example of objColVals would be {name: panther, sleepy: true}
+    devourBurger: function (objColVals, condition, cb) {
+        var queryString = "UPDATE " + table;
         queryString += " SET ";
         queryString += objToSql(objColVals);
         queryString += " WHERE ";
         queryString += condition;
-
         console.log(queryString);
         connection.query(queryString, function (err, result) {
             if (err) {
                 throw err;
             }
-
             cb(result);
         });
     },
