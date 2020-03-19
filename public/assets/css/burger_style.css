@@ -2,6 +2,42 @@
     background-color: #ffca63;
     margin: 0;
     height: 100vh;
+    width: 100%;
+    max-width: 2000px;
+}
+
+#burger {
+    width: 12em;
+    height: 9em;
+    /* margin-top: 2em; */
+    position: relative;
+    animation-name: burgerSlide;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards
+}
+
+@keyframes burgerSlide {
+    0% {
+        left: 43vw;
+        top: -28em;
+    }
+    25% {
+        left: 43vw;
+        top: -20em;
+    }
+    50% {
+        left:43vw;
+        top: -12em;
+    }
+    75% {
+        left: 43vw;
+        top:-4em;
+    }
+    100% {
+        left: 43vw;
+        top: 3em;
+    }
 }
 
 #submit {
@@ -9,17 +45,12 @@
 }
 
 #burgerName {
-    height: 4em;
+    height: 2.5em;
     width: 75%;
+    margin-bottom: .5em;
 }
 
 ol {
- background-color: #fff;
+    background-color: #fff;
 }
 
-#burger {
-    margin-left: 26vw;
-    width: 28%;
-    height: 21%;
-    margin-top: 2em;
-}

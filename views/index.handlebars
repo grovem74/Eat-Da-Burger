@@ -20,7 +20,7 @@
             <ol>
                 {{#each burgers}}
                 {{#unless devoured}}
-                <li>&nbsp;Created Burger</li>
+                <li>{{{this.burger_name}}}</li>
                 {{/unless}}
                 {{/each}}
             </ol>
@@ -30,7 +30,8 @@
             <ol>
                 {{#each burgers}}
                 {{#if devoured}}
-                <li>&nbsp;Devoured Burger</li>
+                <li>{{{this.burger_name}}}</li>
+                <li></li>
                 {{/if}}
                 {{/each}}
             </ol>

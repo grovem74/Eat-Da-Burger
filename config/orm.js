@@ -1,6 +1,6 @@
 // Import MySQL connection.
 var connection = require("../config/connection.js");
-
+let burgerData;
 // Helper function for SQL syntax.
 function printQuestionMarks(num) {
     var arr = [];
@@ -38,12 +38,16 @@ function objToSql(ob) {
 // Object for SQL statement functions.
 var orm = {
     selectAll: function (tableInput, cb) {
-        var queryString = "SELECT * FROM " + "burgers" + ";";
+        var queryString = "SELECT * FROM burgers;";
+        
         connection.query(queryString, function (err, result) {
             if (err) {
                 throw err;
             }
             cb(result);
+            burgerData = result[0].burger_name;
+            console.log("ran selectAll() and retunred result: ", result);
+            console.log("burgerData: ", burgerData);
         });
     },
     create: function (table, cols, vals, cb) {
