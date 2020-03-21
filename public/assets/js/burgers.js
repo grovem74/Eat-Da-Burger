@@ -1,6 +1,6 @@
 // wait until the DOM is loaded to attach handlers
-$(document).ready(){
-  $(function () {
+$( document ).ready(function() {
+  // $(function () {
     $(".devour").on("click", function (event) {
       event.preventDefault();
       var id = $(this).data("id");
@@ -48,8 +48,6 @@ $(document).ready(){
       );
     });
 
-  });
-
-
-}
+  // });
+})
 
