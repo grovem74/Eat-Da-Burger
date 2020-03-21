@@ -36,7 +36,7 @@ function objToSql(ob) {
 // Object for SQL statement functions.
 var orm = {
     selectAll: function (tableInput, cb) {
-        var queryString = "SELECT * FROM burgers;";
+        var queryString = "SELECT * FROM " + tableInput + ";";
         connection.query(queryString, function (err, result) {
             if (err) {
                 throw err;
@@ -64,7 +64,7 @@ var orm = {
     },
 
     // An example of objColVals would be {name: panther, sleepy: true}
-    devourBurger: function (objColVals, condition, cb) {
+    devourBurger: function (table, objColVals, condition, cb) {
         var queryString = "UPDATE " + table;
         queryString += " SET ";
         queryString += objToSql(objColVals);

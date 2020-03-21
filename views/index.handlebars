@@ -3,7 +3,7 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            <img src="/assets/img/burger.png" id="burger" alt="burger">
+            <img src="/assets/img/burger.png" id="burgerpic" alt="burgerpic">
         </div>
     </div>
     <div class="row">
@@ -21,7 +21,7 @@
             <ol>
                 {{#each burgers}}
                 {{#unless devoured}}
-                <li>{{{this.burger_name}}} <button type="submit" class="devour" id="devour-it-1">Devour It!</button></li>
+                <li>{{{burger_name}}} <button type="submit" class="devour" data-id={{id}}>Devour It!</button></li>
                 {{/unless}}
                 {{/each}}
             </ol>
@@ -32,7 +32,7 @@
             <ol>
                 {{#each burgers}}
                 {{#if devoured}}
-                <li>{{{this.burger_name}}}</li>
+                <li>{{{burger_name}}}</li>
                 {{/if}}
                 {{/each}}
             </ol>

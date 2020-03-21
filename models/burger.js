@@ -2,7 +2,7 @@ var orm = require("../config/orm.js");
 
 var burger = {
     selectAll: function (cb) {
-        orm.selectAll("", function (res) {
+        orm.selectAll("burgers", function (res) {
             cb(res);
         });
     },
@@ -11,11 +11,11 @@ var burger = {
             cb(res);
         });
     },
-    devourBurger: function (objColVals, condition, cb) {
+    devourBurger: function (objColVals, condition, cb) { 
         orm.devourBurger("burgers", objColVals, condition, function (res) {
             cb(res);
         });
     }
 };
 
-module.exports = burger
+module.exports = burger;

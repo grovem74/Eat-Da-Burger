@@ -5,29 +5,38 @@ var burger = require("../models/burger.js");
 var router = express.Router();
 
 // routes
-router.get("/", function (req, res) {
-  burger.selectAll(function (data) {
+router.get("/", function (req, res) {console.log(burger)
+  res.redirect("/burgers");
+});
+
+router.get("/burgers", function (req, res) {
+  burger.selectAll(function(data){
     var hbsObject = {
       burgers: data
     };
     res.render("index", hbsObject);
-  });
+  })
+})
+
+router.put("/api/burgers/:id", function (req, res) {console.log("got to put")
+// var burgerId = req.params.id
+burger.devourBurger({
+  devoured: req.body.devoured
+})
+  // burger.devourBurger(function (data) {
+
+    // var hbsObject = {
+    //   burgers: data
+    // };
+    // res.render("index", hbsObject);
+  // });
 });
 
-// router.get("/", function (req, res) {
-//   burger.selectAll(function (data) {
-//     var hbsObject = {
-//       burgers: data[1]
-//     };
-//     res.render("index", hbsObject);
-//   });
-// });
-
-router.post("/api/burgers", function (req, res) {
+router.post("/api/burgers", function (req, res) {console.log("got to post")
   burger.createBurger([
     "burger_name", "devoured"
   ], [
-    req.body.burger_name, 0
+    req.body.burger_name, req.body.devoured
   ], function (result) {
     // Send back the ID of the new burger
     console.log("created burger");

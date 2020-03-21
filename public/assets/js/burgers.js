@@ -1,29 +1,31 @@
 // wait until the DOM is loaded to attach handlers
-$(function() {
-    $("#devour-it-1").on("click", function(event) {
+$(document).ready(){
+  $(function () {
+    $(".devour").on("click", function (event) {
+      event.preventDefault();
       var id = $(this).data("id");
-
-      var newState = $(this).attr("devoured", true);
+      console.log(id);
+      var newState = $(this).data("devoured");
 
       var newDevouredState = {
         devoured: newState
       };
-     
+
       // Send the PUT request.
       $.ajax("/api/burgers/" + id, {
         type: "PUT",
         data: newDevouredState
       }).then(
-        function() {
+        function () {
           console.log("changed devoured to", newState);
           // Reload the page to get the updated list
           location.reload();
         }
       );
     });
-  
 
-    $("#submit").on("submit", function(event) {
+
+    $("#submit").on("submit", function (event) {
       // Make sure to preventDefault on a submit event.
       event.preventDefault();
       alert("clicked");
@@ -32,13 +34,13 @@ $(function() {
         devoured: false
       };
       console.log("newBurger", newBurger);
-  
+
       // Send the POST request.
       $.ajax("/api/burgers", {
         type: "POST",
         data: newBurger
       }).then(
-        function() {
+        function () {
           console.log("created new burger");
           // Reload the page to get the updated list
           location.reload();
@@ -47,5 +49,7 @@ $(function() {
     });
 
   });
-  
-  
+
+
+}
+
