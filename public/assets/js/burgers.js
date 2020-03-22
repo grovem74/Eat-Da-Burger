@@ -24,14 +24,12 @@ $(document).ready(function () {
     );
   });
 
-
-  $("#submit").on("submit", function (event) {
+  $(".create").on("click", function (event) {
     // Make sure to preventDefault on a submit event.
     event.preventDefault();
-    alert("clicked");
     var newBurger = {
       burger_name: $("#burgerName").val().trim(),
-      devoured: false
+      devoured: 0
     };
     console.log("newBurger", newBurger);
 
@@ -47,7 +45,5 @@ $(document).ready(function () {
       }
     );
   });
-
-  // });
 })
 

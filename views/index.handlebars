@@ -21,14 +21,15 @@
             <ol>
                 {{#each burgers}}
                 {{#unless devoured}}
-                <li>{{{burger_name}}} <button type="submit" class="devour" data-id={{id}}>Devour It!</button></li>
+                <li>{{{burger_name}}} <button type="submit" class="devour btn-flat blue" data-id={{id}}>Devour It!</button></li>
                 {{/unless}}
                 {{/each}}
             </ol>
             <div id="noCreate">Create some burgers!</div>
         </div>
         <div class="col s2"></div>
-        <div class="col s3"><br>
+        <div class="col s3">
+        <div class="center-align">Burgers devoured: {{{burgers.length}}}</div>
             <ol>
                 {{#each burgers}}
                 {{#if devoured}}
@@ -46,10 +47,9 @@
         <div class="col s4 center-align"">
             <form class=" create-form">
             <input type="text-area" id="burgerName" name="name"><br>
-            <span id="newBurger">Enter a burger you want to eat and click the "Submit" button.</span>
+            <span id="newBurger">Enter a burger you want to eat and click the CREATE button.</span>
             <br><br>
-            <a class="btn-flat blue" id="submit" type="submit">Submit</a>
-            {{!-- <button type="submit" id="test">Submit</button> --}}
+            <button type="submit" class="create btn-flat blue">Create!</button>
             </form>
         </div>
         <div class="col s4"></div>

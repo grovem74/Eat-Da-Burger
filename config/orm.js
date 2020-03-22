@@ -24,7 +24,7 @@ function objToSql(ob) {
             if (typeof value === "string" && value.indexOf(" ") >= 0) {
                 value = "'" + value + "'";
             }
-  
+
             arr.push(key + "=" + value);
         }
     }
@@ -45,8 +45,9 @@ var orm = {
             burgerData = result[0].burger_name;
         });
     },
-    createBurger: function (table, cols, vals, cb) { console.log("create");
-        var queryString = "INSERT INTO" + table;
+    createBurger: function (table, cols, vals, cb) {
+        console.log("create");
+        var queryString = "INSERT INTO " + table;
         queryString += " (";
         queryString += cols.toString();
         queryString += ") ";
@@ -58,12 +59,9 @@ var orm = {
             if (err) {
                 throw err;
             }
-
             cb(result);
         });
     },
-
-
     devourBurger: function (table, objColVals, condition, cb) {
         var queryString = "UPDATE " + table;
         queryString += " SET ";
