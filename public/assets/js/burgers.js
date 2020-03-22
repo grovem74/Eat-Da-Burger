@@ -4,6 +4,7 @@ $(document).ready(function () {
     event.preventDefault();
     var id = $(this).data("id");
     console.log(id);
+    console.log("this.data: ",$(this).data("devoured"));
     var newState = $(this).data("devoured");
 
     var newDevouredState = {
@@ -16,7 +17,7 @@ $(document).ready(function () {
       data: newDevouredState
     }).then(
       function () {
-        console.log("changed devoured to", newState);
+        console.log("changed devoured to");
         // Reload the page to get the updated list
         location.reload();
       }
