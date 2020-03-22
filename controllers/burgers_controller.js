@@ -1,11 +1,13 @@
 var express = require("express");
-
+var burger = require("../models/burger");
 
 // Create the router for the app
 var router = express.Router();
 
-var burger = require("../models/burger");
 // routes
+router.get("/", function (req, res) {
+    res.redirect("/burgers");
+})
 
 router.get("/burgers", function (req, res) {
   burger.selectAll(function (data) {
