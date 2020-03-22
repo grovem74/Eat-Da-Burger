@@ -1,15 +1,14 @@
 .container {
     background-color: #ffca63;
     margin: 0;
-    height: 100vh;
-    width: 100%;
+    height: 125vh;
+    width: 100vw;
     max-width: 2000px;
   }
   
   #burgerpic {
     width: 12em;
     height: 9em;
-    /* margin-top: 2em; */
     position: relative;
     animation-name: burgerSlide;
     animation-duration: 2s;
@@ -19,24 +18,24 @@
   
   @keyframes burgerSlide {
     0% {
-        left: 45vw;
+        left: 43vw;
         top: -28em;
     }
     25% {
-        left: 45vw;
+        left: 43vw;
         top: -20em;
     }
     50% {
-        left: 45vw;
+        left: 43vw;
         top: -12em;
     }
     75% {
-        left: 45vw;
+        left: 43vw;
         top: -4em;
     }
     100% {
-        left: 45vw;
-        top: 3em;
+        left: 43vw;
+        top: 4em;
     }
   }
   
@@ -57,13 +56,14 @@
   }
   
   .devour {
-    /* display: block; */
     position: absolute;
-    left: 31em;
+    left: 103%;
+    height: 2.25em;
   }
   
   li {
     margin-bottom: .5em;
+    height: 2em
   }
   
   #noDevour {

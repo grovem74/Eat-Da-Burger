@@ -6,9 +6,6 @@ var router = express.Router();
 
 var burger = require("../models/burger");
 // routes
-// router.get("/", function (req, res) {console.log(burger)
-//   res.redirect("/burgers");
-// });
 
 router.get("/burgers", function (req, res) {
   burger.selectAll(function (data) {
