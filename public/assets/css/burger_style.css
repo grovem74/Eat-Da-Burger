@@ -60,6 +60,14 @@
     left: 103%;
     height: 2.25em;
   }
+
+  .devour:hover{
+    color:  white
+  }
+
+  .create:hover{
+    color:  white
+  }
   
   li {
     margin-bottom: .5em;
