@@ -9,34 +9,9 @@
   #burgerpic {
     width: 12em;
     height: 9em;
+    margin-left: 43vw;
     position: relative;
-    animation-name: burgerSlide;
-    animation-duration: 2s;
-    animation-timing-function: linear;
-    animation-fill-mode: forwards
-  }
-  
-  @keyframes burgerSlide {
-    0% {
-        left: 43vw;
-        top: -28em;
-    }
-    25% {
-        left: 43vw;
-        top: -20em;
-    }
-    50% {
-        left: 43vw;
-        top: -12em;
-    }
-    75% {
-        left: 43vw;
-        top: -4em;
-    }
-    100% {
-        left: 43vw;
-        top: 4em;
-    }
+    top: 7vh;
   }
   
   #submit {
@@ -92,4 +67,7 @@
     top: 22em;
     width: 23em;
     text-align: center;
+  }
+  #devourMessage{
+    font-size: 3em;
   }

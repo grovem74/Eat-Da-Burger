@@ -2,11 +2,9 @@
 $(document).ready(function () {
   $(".devour").on("click", function (event) {
     event.preventDefault();
+    $("#devourMesssage").text("YUM!");
     var id = $(this).data("id");
-    console.log(id);
-    console.log("this.data: ",$(this).data("devoured"));
     var newState = $(this).data("devoured");
-
     var newDevouredState = {
       devoured: newState
     };
@@ -17,7 +15,7 @@ $(document).ready(function () {
       data: newDevouredState
     }).then(
       function () {
-        console.log("changed devoured to");
+ 
         // Reload the page to get the updated list
         location.reload();
       }
