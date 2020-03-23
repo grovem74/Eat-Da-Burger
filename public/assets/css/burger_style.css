@@ -1,73 +1,145 @@
 .container {
-    background-color: #ffca63;
-    margin: 0;
-    height: 125vh;
-    width: 100vw;
-    max-width: 2000px;
-  }
-  
-  #burgerpic {
-    width: 12em;
-    height: 9em;
-    margin-left: 43vw;
-    position: relative;
-    top: 7vh;
-  }
-  
-  #submit {
-    text-align: center;
-  }
-  
-  #burgerName {
-    height: 2.5em;
-    width: 75%;
-    margin-bottom: .5em;
-  }
-  
-  ol {
-    background-color: #fff;
-    z-index: 10;
-    position: relative;
-  }
-  
-  .devour {
-    position: absolute;
-    left: 103%;
-    height: 2.25em;
-  }
+  margin: 0;
+  width: 100vw;
+  max-width: 2000px;
+}
 
-  .devour:hover{
-    color:  white
-  }
+body {
+  background-color: #ffca63;
+}
 
-  .create:hover{
-    color:  white
-  }
-  
-  li {
-    margin-bottom: .5em;
-    height: 2em
-  }
-  
-  #noDevour {
-    position: absolute;
-    z-index: 0;
-    color: red;
-    font-weight: 700;
-    top: 22em;
-    width: 23em;
-    text-align: center;
-  }
-  
-  #noCreate {
-    position: absolute;
-    z-index: 0;
-    color: red;
-    font-weight: 700;
-    top: 22em;
-    width: 23em;
-    text-align: center;
-  }
-  #devourMessage{
-    font-size: 3em;
-  }
+#burgerpic {
+  width: 9em;
+  height: 6em;
+  margin-left: 44.75vw;
+  position: relative;
+  top: 3vh;
+}
+
+#title {
+  /* margin-bottom: 0; */
+  margin-top: -1em;
+}
+
+;
+#submit {
+  text-align: center;
+}
+
+#burgerName {
+  height: 2.5em;
+  width: 75%;
+  margin-bottom: .5em;
+}
+
+ol {
+  background-color: #fff;
+  z-index: 10;
+  position: relative;
+  bottom: 1em;
+  width: 23em;
+}
+
+.devour {
+  position: absolute;
+  left: 103%;
+  height: 2.25em;
+}
+
+.devour:hover {
+  color: white
+}
+.create {
+position: relative;
+bottom: 1em;
+}
+
+.customize {
+  position: relative;
+  top: 3em;
+  right: 16.5em;
+}
+
+/* .customize:disabled {
+
+} */
+
+.create:hover, .customize:hover {
+  color: white
+}
+
+li {
+  margin-bottom: .5em;
+  height: 2em
+}
+
+#noDevour {
+  position: absolute;
+  z-index: 0;
+  color: red;
+  font-weight: 700;
+  top: 18em;
+  width: 23em;
+  text-align: center;
+}
+
+#noCreate {
+  position: absolute;
+  z-index: 0;
+  color: red;
+  font-weight: 700;
+  top: 18em;
+  width: 23em;
+  text-align: center;
+}
+
+/* #createMessage {
+  font-size: 3em;
+} */
+
+/* #devourMessage {
+  font-size: 3em;
+} */
+
+.toppings {
+  height: 3em;
+  width: 3em;
+}
+
+.toppings:hover {
+  height: 4.5em;
+  width: 4.5em;
+  box-shadow: 0 2px #2196f3;
+}
+
+#burger-toppings {
+  margin: 1em 0 2em 0;
+}
+
+.selected {
+  height: 4.5em;
+  width: 4.5em;
+  box-shadow: 0 2px #2196f3;
+}
+
+#burger-display {
+  margin-top: -1.25em;
+  min-height: 12em;
+}
+
+#customBurger {
+  margin-left: 11.25em;
+  font-size: 1.5em;
+}
+
+#customBurger2 {
+  margin-left: 9em;
+}
+
+#created-burgers, #devoured-burgers {
+  font-size: 1.5em;
+}
+
+#devoured-list {
+  margin-right: 20em;
+}

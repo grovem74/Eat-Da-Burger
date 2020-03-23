@@ -15,6 +15,11 @@ var burger = {
         orm.devourBurger("burgers", objColVals, condition, function (res) {
             cb(res);
         });
+    },
+    customizeBurger: function (cols, vals, cb) { 
+        orm.customizeBurger("burgers", cols, vals, function (res) {
+            cb(res);
+        });
     }
 };
 

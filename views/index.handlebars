@@ -3,34 +3,46 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            <img src="/assets/img/burger.png" id="burgerpic" alt="burgerpic">
+            <img src="/assets/img/burgerpic.png" id="burgerpic" alt="burgerpic">
         </div>
     </div>
-    <div class="row">
+    <div class="row" id="title">
         <div class="col s3"></div>
         <div class="col s6 center-align">
-            <h2>Eat-Da-Burger!</h2>
+            <h3>Eat-Da-Burger!</h3>
         </div>
         <div class="col s3"></div>
     </div>
 
     <div class="row">
         <div class="col s2"></div>
-        <div class="col s3">
-            <div class="center-align">Burgers created: {{{burgers.length}}}</div>
+        <div class="col s4">
+            <span id="created-burgers">Burgers Created</span>
+        </div>
+         <div class="col s1"></div>
+        <div class="col s4">
+            <span id="devoured-burgers">Burgers Devoured</span>
+        </div>
+        <div class="col s1"></div>
+    </div>
+
+    <div class="row" id="burger-display">
+        <div class="col s2"></div>
+        <div class="col s4"><br>
             <ol>
                 {{#each burgers}}
                 {{#unless devoured}}
-                <li>{{{burger_name}}} <button type="submit" class="devour btn-flat blue" data-id={{id}}>Devour It!</button></li>
+                <li>{{{burger_name}}} <button type="submit" class="devour btn-flat blue" data-id={{id}}>Devour
+                        It!</button></li>
                 {{/unless}}
                 {{/each}}
             </ol>
-            <div id="noCreate">Create some burgers!</div>
+            <div id="noCreate">Come on, create some burgers!</div>
         </div>
-        <div class="col s2"></div>
-        <div class="col s3">
-        <div class="center-align">Burgers devoured: {{{burgers.length}}}</div>
-            <ol>
+        <div class="col s1"></div>
+        <div class="col s5">
+            <br>
+            <ol id="devoured-list">
                 {{#each burgers}}
                 {{#if devoured}}
                 <li>{{{burger_name}}}</li>
@@ -43,16 +55,61 @@
     </div>
 
     <div class="row">
-        <div class="col s4"></div>
-        <div class="col s4 center-align">
+        <div class="col s1"></div>
+        <div class="col s5 center-align">
             <form class=" create-form">
-            <input type="text-area" id="burgerName" name="name"><br>
-            <span id="newBurger">Enter a burger you want to eat and click the CREATE button.</span>
-            <br><br>
-            <button type="submit" class="create btn-flat blue">Create!</button>
+                <input type="text-area" id="burgerName" name="name"><br>
+                <span id="newBurger">Enter a burger you want to eat and click the CREATE button.</span>
+                <br><br>
+                <button type="submit" class="create btn-flat blue">Create!</button>&nbsp;
             </form>
         </div>
-        <div class="col s4"></div>
+        <div class="col s5">
+            <span id="customBurger">Need help?</span><br>
+            <span id="customBurger2">Select up to 3 toppings to build your custom burger!</span>
+            <button type="submit" class="customize btn-flat blue disabled" id="customize">CUSTOMIZE</button>
+        </div>
+        <div class="col s1"></div>
+    </div>
+
+    <div class="row" id="burger-toppings">
+        <div class="col s1"></div>
+        <div class="col s1">
+            <a href="" id="Bacon"><img src="/assets/img/bacon.png" id="Bacon-img" class="toppings" alt="bacon"></a>
+        </div>
+        <div class="col s1">
+            <a href="" id="Fried-Egg"><img src="/assets/img/egg.png" id="egg-img" class="toppings" alt="egg"></a>
+        </div>
+        <div class="col s1">
+            <a href="" id="Pineapple"><img src="/assets/img/pineapple.png" id="pineapple-img" class="toppings"
+                    alt="pineapple"></a>
+        </div>
+        <div class="col s1">
+            <a href="" id="Mushroom"><img src="/assets/img/mushrooms.png" id="mushroom-img" class="toppings"
+                    alt="mushroom"></a>
+        </div>
+        <div class="col s1">
+            <a href="" id="Avocado"><img src="/assets/img/avocado.png" id="avocado-img" class="toppings"
+                    alt="avocado"></a>
+        </div>
+        <div class="col s1">
+            <a href="" id="Jalapeno"><img src="/assets/img/jalapeno.png" id="jalapeno-img" class="toppings"
+                    alt="jalapeno"></a>
+        </div>
+        <div class="col s1">
+            <a href="" id="Garlic-Butter"><img src="/assets/img/garlic-butter.png" id="garlic-butter-img"
+                    class="toppings" alt="garlic-butter"></a>
+        </div>
+        <div class="col s1">
+            <a href="" id="Cheese"><img src="/assets/img/cheese.png" id="cheese-img" class="toppings" alt="cheese"></a>
+        </div>
+        <div class="col s1">
+            <a href="" id="BBQ"><img src="/assets/img/bbq.png" id="BBQ-img" class="toppings" alt="bbq"></a>
+        </div>
+        <div class="col s1">
+            <a href="" id="Wrap"><img src="/assets/img/lettuce-wrap.png" id="Wrap-img" class="toppings" alt="wrap"></a>
+        </div>
+        <div class="col s1"></div>
     </div>
 
 </div>
