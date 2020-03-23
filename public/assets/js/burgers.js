@@ -1,6 +1,7 @@
 // wait until the DOM is loaded to attach handlers
 
 $(document).ready(function () {
+  var wrap;
   $(".devour").on("click", function (event) {
     event.preventDefault();
     var id = $(this).data("id");
@@ -51,7 +52,12 @@ $(document).ready(function () {
     event.preventDefault();
     event.stopPropagation();
     var customName = custom.join().replace(",", "  ");
-    var customBurgerName = customName.replace(",", "  ") + " Burger";
+    if (wrap === true) {
+      var customBurgerName = customName.replace(",", "  ") + " Wrap";
+    } else {
+      var customBurgerName = customName.replace(",", "  ") + " Burger";
+    }
+
 
     var customBurger = {
       burger_name: customBurgerName,
@@ -138,24 +144,23 @@ $(document).ready(function () {
     console.log(custom);
   });
 
-  $("#Other1").on("click", function (event) {
+  $("#BBQ").on("click", function (event) {
     event.preventDefault();
-    $("#other1-img").addClass("selected");
-    if (custom.includes("Other1") === false) custom.push("Other1");
+    $("#BBQ-img").addClass("selected");
+    if (custom.includes("BBQ") === false) custom.push("BBQ");
     limitToppings();
     console.log(custom);
   });
 
-  $("#Other2").on("click", function (event) {
+  $("#Wrap").on("click", function (event) {
     event.preventDefault();
-    $("#other2-img").addClass("selected");
-    if (custom.includes("Other2") === false) custom.push("Other2");
-    limitToppings();
-    console.log(custom);
+    $("#wrap-text").addClass("wrap");
+      wrap = true;
+      $("#Wrap-img").attr("style", "filter: grayscale(0%)");
   });
 
 
-  // toppings = ["Bacon", "Fried-Egg", "Pineapple", "Mushroom", "Avocado", "Jalapeno", "Garlic-Butter", "Other1", "Other2"]
+  // toppings = ["Bacon", "Fried-Egg", "Pineapple", "Mushroom", "Avocado", "Jalapeno", "Garlic-Butter", "BBQ"]
   // var i;
   // for (i = 0; i < toppings.length; i++) {
   //   $(`#${toppings[i]}`).on("click", function (event) {
@@ -169,7 +174,11 @@ $(document).ready(function () {
   // };
 
   function limitToppings() {
+    $("#burgerName").val("");
+    $("#burgerName").prop("disabled", true);
+    $(".create").addClass("disabled");
     $("#customize").removeClass("disabled");
+    $("#customize").addClass("selectCustom");
     if (custom.length > 3) {
       $(`#${custom[0]}-img`).removeClass("selected");
       $(`#${custom[0]}-img`).addClass("toppings");

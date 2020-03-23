@@ -5,11 +5,8 @@ var burger = require("../models/burger");
 var router = express.Router();
 
 // routes
-router.get("/", function (req, res) {
-    res.redirect("/burgers");
-})
 
-router.get("/burgers", function (req, res) {
+router.get("/", function (req, res) {
   burger.selectAll(function (data) {
     var hbsObject = {
       burgers: data

@@ -49,9 +49,10 @@ ol {
 .devour:hover {
   color: white
 }
+
 .create {
-position: relative;
-bottom: 1em;
+  position: relative;
+  bottom: 1em;
 }
 
 .customize {
@@ -60,11 +61,11 @@ bottom: 1em;
   right: 16.5em;
 }
 
-/* .customize:disabled {
+.selectCustom{
+  color: white;
+}
 
-} */
-
-.create:hover, .customize:hover {
+.create:hover {
   color: white
 }
 
@@ -112,6 +113,16 @@ li {
   box-shadow: 0 2px #2196f3;
 }
 
+#Wrap-img {
+  filter: grayscale(100%);
+  height: 3em;
+  width: 3em;
+}
+
+#Wrap-img:hover {
+  filter: grayscale(0%);
+}
+
 #burger-toppings {
   margin: 1em 0 2em 0;
 }
@@ -142,4 +153,15 @@ li {
 
 #devoured-list {
   margin-right: 20em;
+}
+
+#wrap {
+  position: relative;
+  right: 4.5em;
+  top: .75em;
+}
+
+.wrap {
+  color: green;
+  font-weight: 700;
 }
