@@ -25,8 +25,11 @@ $(document).ready(function () {
   $(".create").on("click", function (event) {
     // Make sure to preventDefault on a submit event.
     event.preventDefault();
+
+    var editedName = $("#burgerName").val().trim().replace("burger", "").charAt(0).toUpperCase() + $("#burgerName").val().trim().replace("burger", "").slice(1) + " Burger";
+
     var newBurger = {
-      burger_name: $("#burgerName").val().trim(),
+      burger_name: editedName,
       devoured: 0
     };
     console.log("newBurger", newBurger);
