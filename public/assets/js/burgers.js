@@ -29,7 +29,23 @@ $(document).ready(function () {
 
     var editedName = $("#burgerName").val().trim().replace("burger", "").charAt(0).toUpperCase() + $("#burgerName").val().trim().replace("burger", "").slice(1) + " Burger";
 
+    // var editedName = $("#burgerName").val().trim().replace("burger", "")
+    //   .split(" ")
+    //   .map(singleWord => { 
+      //  singleWord = 
+      
+      //   return singleWord;
+    //   })
+    //   .join(" ") + " Burger";
+
+
+    //   const other4 = arr.map(a => {
+    //     return a.replace(a.charAt(0), a.charAt(0).toUpperCase());
+    // })
+
+
     var newBurger = {
+      burger_name: editedName,
       burger_name: editedName,
       devoured: 0
     };
