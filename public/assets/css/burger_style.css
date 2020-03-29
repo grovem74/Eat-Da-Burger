@@ -11,7 +11,7 @@ body {
 #burgerpic {
   width: 9em;
   height: 6em;
-  margin-left: 44.75vw;
+  margin-left: 46vw;
   position: relative;
   top: 3vh;
 }
@@ -42,12 +42,18 @@ ol {
 
 .devour {
   position: absolute;
-  left: 103%;
+  left: 130%;
   height: 2.25em;
 }
 
-.devour:hover {
+.devour:hover, .create:hover, .make:hover {
   color: white
+}
+
+.make {
+  position: absolute;
+  left: 103%;
+  height: 2.25em;
 }
 
 .create {
@@ -61,12 +67,8 @@ ol {
   right: 16.5em;
 }
 
-.selectCustom{
+.selectCustom {
   color: white;
-}
-
-.create:hover {
-  color: white
 }
 
 li {
@@ -123,6 +125,10 @@ li {
   filter: grayscale(0%);
 }
 
+#wrap-text {
+  color: green;
+}
+
 #burger-toppings {
   margin: 1em 0 2em 0;
 }
@@ -162,6 +168,12 @@ li {
 }
 
 .wrap {
+  position: relative;
+  right: 6em;
+  top: .75em;
+}
+
+.wrap-selected {
   color: green;
   font-weight: 700;
 }

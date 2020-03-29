@@ -170,7 +170,7 @@ $(document).ready(function () {
 
   $("#Wrap").on("click", function (event) {
     event.preventDefault();
-    $("#wrap-text").addClass("wrap");
+    $("#wrap-text").addClass("wrap-selected");
       wrap = true;
       $("#Wrap-img").attr("style", "filter: grayscale(0%)");
   });

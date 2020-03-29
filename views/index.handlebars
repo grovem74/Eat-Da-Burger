@@ -33,6 +33,7 @@
                 {{#each burgers}}
                 {{#unless devoured}}
                 <li>{{{burger_name}}} <button type="submit" class="devour btn-flat blue" data-id={{id}}>Devour
+                        It!</button><button type="submit" class="make btn-flat green" data-id={{id}}>Make
                         It!</button></li>
                 {{/unless}}
                 {{/each}}
@@ -75,7 +76,8 @@
     <div class="row" id="burger-toppings">
         <div class="col s1"></div>
         <div class="col s1">
-            <a href="" id="Bacon"><img src="/assets/img/bacon.png" id="Bacon-img" class="toppings" alt="bacon"></a>
+            <a href="" id="Bacon" class="custom" data-type="bacon"><img src="/assets/img/bacon.png" id="Bacon-img"
+                    class="toppings" alt="bacon"></a>
         </div>
         <div class="col s1">
             <a href="" id="Fried-Egg"><img src="/assets/img/egg.png" id="egg-img" class="toppings" alt="egg"></a>
@@ -109,7 +111,7 @@
         <div class="col s1">
             <a href="" id="Wrap"><img src="/assets/img/lettuce-wrap.png" id="Wrap-img" alt="wrap"></a>
         </div>
-        <div id="wrap">
+        <div class="wrap">
             <span id="wrap-text">Make it a wrap</span>
         </div>
         <div class="col s1"></div>
