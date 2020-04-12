@@ -1,11 +1,12 @@
 ![Profile Pic](https://avatars2.githubusercontent.com/u/56848742?v=4) 
   
 Username: grovem74<br>
-Email: null<br>
+Email: matthewg74@gmail.com<br>
      
 # Eat-Da-Burger
 
-![Project Status](https://img.shields.io/badge/status-complete-green)&nbsp;      
+![Project Status](https://img.shields.io/badge/status-complete-green)&nbsp;  
+Deployed at: https://du-eat-da-burger.herokuapp.com/    
 
 ### Project Description
 This application allows the user to create and devour burgers.
